@@ -96,7 +96,7 @@ const SessionDetails = () => {
         throw new Error("No token found in localStorage");
       }
 
-      const response = await fetch(`http://localhost:3000/therapy/${id}/join`, {
+      const response = await fetch(`https://serenity-server-iota.vercel.app/therapy/${id}/join`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
