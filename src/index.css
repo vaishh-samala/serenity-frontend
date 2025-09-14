@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Main background and text */
+    --background: 0 0% 100%;
+    --foreground: 200 10% 20%;
+
+    /* Card styles */
+    --card: 0 0% 100%;
+    --card-foreground: 200 10% 20%;
+
+    /* Popover styles */
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 10% 20%;
+
+    /* Primary - Calming teal */
+    --primary: 175 50% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 175 55% 35%;
+
+    /* Secondary - Soft gray */
+    --secondary: 210 10% 96%;
+    --secondary-foreground: 200 10% 25%;
+
+    /* Muted elements */
+    --muted: 210 10% 98%;
+    --muted-foreground: 200 5% 45%;
+
+    /* Accent - Soft blue */
+    --accent: 190 60% 95%;
+    --accent-foreground: 190 60% 30%;
+
+    /* Destructive actions */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 210 20% 94%;
+    --input: 210 20% 94%;
+    --ring: 175 50% 40%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(175 50% 40%),
+      hsl(175 45% 50%)
+    );
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --shadow-soft:
+      0 4px 6px -1px hsl(0 0% 0% / 0.05), 0 2px 4px -1px hsl(0 0% 0% / 0.03);
+    --shadow-medium:
+      0 10px 15px -3px hsl(0 0% 0% / 0.08), 0 4px 6px -2px hsl(0 0% 0% / 0.04);
+    --shadow-large:
+      0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+
+    /* Typography */
+    --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-in-out;
+
+    /* Sidebar styles */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 200 10% 25%;
+    --sidebar-primary: 175 50% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 10% 95%;
+    --sidebar-accent-foreground: 200 10% 20%;
+    --sidebar-border: 210 20% 92%;
+    --sidebar-ring: 175 50% 40%;
+  }
+
+  /* Removing dark mode as requested - white theme only */
+  .dark {
+    /* Inherit light theme values */
+    --background: 0 0% 100%;
+    --foreground: 200 10% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 10% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 10% 20%;
+    --primary: 175 50% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 96%;
+    --secondary-foreground: 200 10% 25%;
+    --muted: 210 10% 98%;
+    --muted-foreground: 200 5% 45%;
+    --accent: 190 60% 95%;
+    --accent-foreground: 190 60% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 94%;
+    --input: 210 20% 94%;
+    --ring: 175 50% 40%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 200 10% 25%;
+    --sidebar-primary: 175 50% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 10% 95%;
+    --sidebar-accent-foreground: 200 10% 20%;
+    --sidebar-border: 210 20% 92%;
+    --sidebar-ring: 175 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
