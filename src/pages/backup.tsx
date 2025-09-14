@@ -823,7 +823,7 @@
 //     const token = localStorage.getItem("token");
 //     if (!token) return;
 
-//     const res = await fetch("https://serenity-backend-beige.vercel.app/user", {
+//     const res = await fetch("https://serenity-server-iota.vercel.app/user", {
 //       headers: { Authorization: `Bearer ${token}` },
 //     });
 //     const data = await res.json();
@@ -846,7 +846,7 @@
 
 //   const handleApprove = async (id) => {
 //     const token = localStorage.getItem("token");
-//     await fetch(`https://serenity-backend-beige.vercel.app/users/${id}`, {
+//     await fetch(`https://serenity-server-iota.vercel.app/users/${id}`, {
 //       method: "PATCH",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -859,7 +859,7 @@
 
 //   const handleReject = async (id) => {
 //     const token = localStorage.getItem("token");
-//     await fetch(`https://serenity-backend-beige.vercel.app/users/${id}`, {
+//     await fetch(`https://serenity-server-iota.vercel.app/users/${id}`, {
 //       method: "PATCH",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -872,7 +872,7 @@
 
 //   const handleSchedule = async (data) => {
 //     const token = localStorage.getItem("token");
-//     await fetch("https://serenity-backend-beige.vercel.app/therapy", {
+//     await fetch("https://serenity-server-iota.vercel.app/therapy", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -907,7 +907,7 @@
 //       fd.append("document", approvalFormData.document);
 //     }
 
-//     const res = await fetch("https://serenity-backend-beige.vercel.app/approval", {
+//     const res = await fetch("https://serenity-server-iota.vercel.app/approval", {
 //       method: "POST",
 //       headers: { Authorization: `Bearer ${token}` },
 //       body: fd,

@@ -38,7 +38,7 @@ const Register = () => {
     }
     setIsLoading(true)
     try {
-      const response = await fetch("https://serenity-backend-beige.vercel.app/auth/signup", {
+      const response = await fetch("https://serenity-server-iota.vercel.app/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,19 +77,19 @@ const Register = () => {
     }));
   };
 
-  if(isLoading){
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-background py-12 flex items-center justify-center">
-      <Card className="border-border/50">
-        <CardContent className="text-center py-12">
-          <div className="flex justify-center items-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-          </div>
-          <p className="text-muted-foreground mt-4">Please wait...</p>
-        </CardContent>
-      </Card>
-    </div>
-  )
+        <Card className="border-border/50">
+          <CardContent className="text-center py-12">
+            <div className="flex justify-center items-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+            </div>
+            <p className="text-muted-foreground mt-4">Please wait...</p>
+          </CardContent>
+        </Card>
+      </div>
+    )
   }
 
   return (

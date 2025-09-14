@@ -32,7 +32,7 @@ const Sessions = () => {
           return;
         }
 
-        const response = await fetch("https://serenity-backend-beige.vercel.app/therapy", {
+        const response = await fetch("https://serenity-server-iota.vercel.app/therapy", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -76,8 +76,8 @@ const Sessions = () => {
             notes: isUpcoming
               ? null
               : session.description
-                  .split("\n")
-                  .join(" "),
+                .split("\n")
+                .join(" "),
           };
 
           const existingTherapy = acc.find((t) => t.therapy === therapyType);
@@ -99,8 +99,8 @@ const Sessions = () => {
 
         const filteredData = selectedTherapy
           ? formattedData.filter(
-              (t) => t.therapy.toLowerCase() === selectedTherapy.toLowerCase(),
-            )
+            (t) => t.therapy.toLowerCase() === selectedTherapy.toLowerCase(),
+          )
           : formattedData;
 
         setSessionsData(filteredData);

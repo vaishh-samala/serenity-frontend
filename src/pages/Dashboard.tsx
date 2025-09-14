@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
-    Calendar,
-    CheckCircle,
-    Clock,
-    PlusCircle,
-    User,
-    XCircle,
+  Calendar,
+  CheckCircle,
+  Clock,
+  PlusCircle,
+  User,
+  XCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -63,10 +63,10 @@ const TherapyDetailsModal = ({ isOpen, onClose, therapy, therapist }) => {
             <label className="block text-md font-medium text-foreground">
               Meeting Link:{" "}
             </label>
-            <a href={therapy.meetingLink ? `${therapy.meetingLink}` :  `https://zoom.us/j/${randomMeetingId}`} className="text-sm text-primary hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer">
-              {therapy.meetingLink ? `${therapy.meetingLink}` :  `https://zoom.us/j/${randomMeetingId}`}
+            <a href={therapy.meetingLink ? `${therapy.meetingLink}` : `https://zoom.us/j/${randomMeetingId}`} className="text-sm text-primary hover:underline"
+              target="_blank"
+              rel="noopener noreferrer">
+              {therapy.meetingLink ? `${therapy.meetingLink}` : `https://zoom.us/j/${randomMeetingId}`}
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -616,7 +616,7 @@ const Dashboard = () => {
     const token = localStorage.getItem("token");
     if (!token) return;
 
-    const res = await fetch("https://serenity-backend-beige.vercel.app/user", {
+    const res = await fetch("https://serenity-server-iota.vercel.app/user", {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
@@ -643,7 +643,7 @@ const Dashboard = () => {
 
   const handleApprove = async (id) => {
     const token = localStorage.getItem("token");
-    await fetch(`https://serenity-backend-beige.vercel.app/admin/therapists/${id}/approve`, {
+    await fetch(`https://serenity-server-iota.vercel.app/admin/therapists/${id}/approve`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -656,7 +656,7 @@ const Dashboard = () => {
 
   const handleReject = async (id) => {
     const token = localStorage.getItem("token");
-    await fetch(`https://serenity-backend-beige.vercel.app/admin/therapists/${id}/reject`, {
+    await fetch(`https://serenity-server-iota.vercel.app/admin/therapists/${id}/reject`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -669,7 +669,7 @@ const Dashboard = () => {
 
   const handleSchedule = async (data) => {
     const token = localStorage.getItem("token");
-    await fetch("https://serenity-backend-beige.vercel.app/therapy", {
+    await fetch("https://serenity-server-iota.vercel.app/therapy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -705,7 +705,7 @@ const Dashboard = () => {
     }
 
     const res = await fetch(
-      "https://serenity-backend-beige.vercel.app/therapist/request-approval",
+      "https://serenity-server-iota.vercel.app/therapist/request-approval",
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
@@ -717,9 +717,9 @@ const Dashboard = () => {
     }
   };
 
-  if(isLoading){
+  if (isLoading) {
     return (
-        <div className="min-h-screen bg-background py-12 flex items-center justify-center">
+      <div className="min-h-screen bg-background py-12 flex items-center justify-center">
         <Card className="border-border/50">
           <CardContent className="text-center py-12">
             <div className="flex justify-center items-center">

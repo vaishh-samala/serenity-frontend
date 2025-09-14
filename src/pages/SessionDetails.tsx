@@ -34,7 +34,7 @@ const SessionDetails = () => {
           return;
         }
 
-        const response = await fetch(`https://serenity-backend-beige.vercel.app/therapy/${id}`, {
+        const response = await fetch(`https://serenity-server-iota.vercel.app/therapy/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
