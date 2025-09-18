@@ -429,8 +429,8 @@ const ScheduleTherapyModal: React.FC<{
               <option value="" disabled>
                 Select therapy type
               </option>
-              <option value="INDIVIDUAL_THERAPY">Individual</option>
-              <option value="GROUP_THERAPY">Group</option>
+              {/* <option value="INDIVIDUAL_THERAPY">Individual</option>
+              <option value="GROUP_THERAPY">Group</option> */}
               <option value="YOGA_THERAPY">Yoga</option>
               <option value="SPIRITUAL_THERAPY">Spiritual</option>
               <option value="MUSIC_THERAPY">Music</option>

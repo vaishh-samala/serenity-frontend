@@ -59,7 +59,7 @@ const Register = () => {
       localStorage.setItem("role", formData.role);
       toast.success("Signup successful! Welcome to Serenity Springs.");
       setTimeout(() => {
-        navigate("/");
+        navigate(formData.role == 'user' ? "/therapies" : "/dashboard");
         navigate(0);
       }, 1500);
     } catch (error) {

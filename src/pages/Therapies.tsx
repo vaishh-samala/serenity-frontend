@@ -19,30 +19,30 @@ import { Link } from "react-router-dom";
 
 const Therapies = () => {
   const therapies = [
-    {
-      icon: Brain,
-      title: "Individual Therapy",
-      description:
-        "One-on-one sessions tailored to your personal needs and goals.",
-      duration: "50 minutes",
-      price: "$120",
-      features: [
-        "Personalized treatment plan",
-        "Weekly or bi-weekly sessions",
-        "Homework exercises",
-      ],
-      color: "bg-primary/10 text-primary",
-    },
-    {
-      icon: Users,
-      title: "Group Therapy",
-      description:
-        "Connect and heal with others who share similar experiences.",
-      duration: "90 minutes",
-      price: "$60",
-      features: ["Peer support", "Shared experiences", "Group activities"],
-      color: "bg-primary/10 text-primary",
-    },
+    // {
+    //   icon: Brain,
+    //   title: "Individual Therapy",
+    //   description:
+    //     "One-on-one sessions tailored to your personal needs and goals.",
+    //   duration: "50 minutes",
+    //   price: "$120",
+    //   features: [
+    //     "Personalized treatment plan",
+    //     "Weekly or bi-weekly sessions",
+    //     "Homework exercises",
+    //   ],
+    //   color: "bg-primary/10 text-primary",
+    // },
+    // {
+    //   icon: Users,
+    //   title: "Group Therapy",
+    //   description:
+    //     "Connect and heal with others who share similar experiences.",
+    //   duration: "90 minutes",
+    //   price: "$60",
+    //   features: ["Peer support", "Shared experiences", "Group activities"],
+    //   color: "bg-primary/10 text-primary",
+    // },
     {
       icon: Activity,
       title: "Yoga Therapy",

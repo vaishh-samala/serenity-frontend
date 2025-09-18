@@ -52,7 +52,7 @@ const Login = () => {
       localStorage.setItem("role", formData.role);
       toast.success("Login successful! Welcome back.");
       setTimeout(() => {
-        navigate("/");
+        navigate(formData.role == 'user' ? "/therapies" : "/dashboard");
         navigate(0);
       }, 1500);
     } catch (error) {

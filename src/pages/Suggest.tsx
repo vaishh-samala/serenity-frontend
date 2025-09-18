@@ -110,7 +110,7 @@ const Suggest = () => {
                     setFormData((prev) => ({ ...prev, therapyType: value }))
                   }
                 >
-                  <div className="flex items-center space-x-2">
+                  {/* <div className="flex items-center space-x-2">
                     <RadioGroupItem value="individual" id="individual" />
                     <Label
                       htmlFor="individual"
@@ -127,7 +127,7 @@ const Suggest = () => {
                     >
                       Group Therapy
                     </Label>
-                  </div>
+                  </div> */}
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="alternative" id="alternative" />
                     <Label
